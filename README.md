@@ -60,9 +60,7 @@ $update  = \App\Models\Ability::create(['name' => 'products:update']);
 $delete  = \App\Models\Ability::create(['name' => 'products:delete']);
 
 $admin->abilities()->attach([$read->id, $create->id, $update->id, $delete->id]);
-
 $staff->abilities()->attach([$read->id, $update->id]);
-
 $customer->abilities()->attach([$read->id]);
 
 $user->roles()->attach($admin->id);
